@@ -1,6 +1,5 @@
-setwd('/home/user/Data1/Data/Spatial10xdata')
 library(reticulate)
-use_condaenv(condaenv = 'tftf', required = TRUE)  # Appropriate System Environment to run tensorflow/keras
+use_condaenv(condaenv = 'Tf', required = TRUE)  # Appropriate System Environment to run tensorflow/keras
 py_config()
 
 library(Seurat)
