@@ -16,11 +16,14 @@ limma >=3.42.
 ```bash
 python spade_spatial_marker_by_deeplearning.py --position [Tissue Position List File] --image [High Res Image File] --scale [Scale for High Res Image] --meta [metadata csv file] --outdir [Output directory]
 ```
-> Files Info
+* Files Info
+
 Tissue Position List file : Tissue coordinate file includes barcodes, row and col coordinates.
 High Res Image File : PNG, JPEG or TIFF for high resolution tissue images
 Scale : Scale for high resolution image. For Visium, find from a scalefactos_json file. 
 meta : meta data for barcodes and clusters. 
 
-> Example
+
+* Example
+
 Check breastca_spatial_SPADE.R file for an example.
