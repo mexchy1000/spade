@@ -1,6 +1,5 @@
 # SPADE
-Discovery of spatial marker by deep learning with spatial transcriptome data
-
+Integrating spatial transcriptomic data with deep features of tissue image
 
 ## Requirements
 python >=3.7\
@@ -25,3 +24,7 @@ meta : meta data for barcodes and clusters. \
 
 * **Example**\
 Check breastca_spatial_SPADE.R file for an example.\
+
+
+##  Reference
+Bae S, Choi H, Lee DS. [ARTICLE NO]
