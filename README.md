@@ -27,4 +27,4 @@ Check breastca_spatial_SPADE.R file for an example.\
 
 
 ##  Reference
-Bae S, Choi H, Lee DS. [ARTICLE NO]
+Sungwoo Bae, Hongyoon Choi, Dong Soo Lee, bioRxiv 2020.06.15.150698; doi: https://doi.org/10.1101/2020.06.15.150698
