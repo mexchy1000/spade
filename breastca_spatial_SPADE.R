@@ -38,7 +38,7 @@ LinkedDimPlot(br.sp)
 write.csv(br.sp@meta.data, 'br_metadata.csv')
 
 #RUN SPADE
-system("python spade_spatial_marker_by_deeplearning.py --position ./BreastCa_10x/spatial/tissue_positions_list.csv --image ./BreastCa_10x/spatial/tissue_hires_image.png --scale 0.08250825 --meta br_metadata.csv --outdir Breast_SPADE")
+system("python spade_spatial_marker_by_deeplearning.py --position ./BreastCa_10x/spatial/tissue_positions_list.csv --image ./BreastCa_10x/spatial/tissue_hires_image.png --scale 0.08250825 --meta br_metadata.csv --outdir Breast_SPADE --numpcs 6")
 
 #Use SPADE result
 br.rep = read.csv('./Breast_SPADE/ts_features_pc.csv', row.names=1)
@@ -56,6 +56,7 @@ library(limma)
 design =  model.matrix(~ 1 + br.sp.z@meta.data$ImageLatent_1 + br.sp.z@meta.data$ImageLatent_2)
 colnames(design) = c('Intercept','PC1','PC2')
 
+br.sp.z = ScaleData(br.sp.z, features=rownames(br.sp.z))
 yy =br.sp.z@assays$SCT@scale.data
 fit = lmFit(yy, design) # fit linear model
 contrast_matrix = makeContrasts(contrasts = "PC1", levels=design)
